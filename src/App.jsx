@@ -1,9 +1,30 @@
+import { useReducer } from "react"
 
-function App() {
+const ACTIONS = 
+{
+  ADD_DIGIT: 'add-didgit',
+  
+}
+
+function reducer(state, action)
+{
+
+}
+
+function App() 
+{
+  [
+    { previousOperand, currentOperand, operation }, 
+    dispatch
+  ] = useReducer(reducer, {})
+  
   return (
     <div className="container mx-auto flex justify-center">
       <div className="bg-neutral-700 text-neutral-100 text-2xl grid grid-cols-4 gap-6 rounded-3xl p-5">
-        <div className="col-span-4 h-[8rem]"></div>
+        <div className="flex flex-col gap-3 col-span-4 h-[8rem]">
+          <p className="ml-auto">{ previousOperand } { operation }</p>
+          <p className="ml-auto">{  currentOperand }</p>
+        </div>
         <button className="bg-sky-800 rounded-xl py-2 px-4 text-center hover:bg-sky-700">AC</button>
         <button className="bg-sky-800 rounded-xl py-2 px-4 text-center hover:bg-sky-700">()</button>
         <button className="bg-sky-800 rounded-xl py-2 px-4 text-center hover:bg-sky-700">%</button>
@@ -27,6 +48,13 @@ function App() {
       </div>
     </div>
   )
+}
+
+function calculate()
+{
+  //Get the number
+  //Get the operand
+  //Get next number, do calculations and show the effect on the screen
 }
 
 export default App
