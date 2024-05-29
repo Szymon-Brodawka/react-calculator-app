@@ -3,12 +3,19 @@ import { useReducer } from "react"
 const ACTIONS = 
 {
   ADD_DIGIT: 'add-didgit',
+  CHOOSE_OPERATION: 'choose-operation',
+  CLEAR_ALL: 'clear-all',
+  CLEAR_DIGIT: 'clear-digit',
+  EVALUATE: 'equal',
   
 }
 
 function reducer(state, action)
 {
+  switch(action)
+  {
 
+  }
 }
 
 function App() 
